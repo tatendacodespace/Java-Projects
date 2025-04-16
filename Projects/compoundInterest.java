@@ -8,25 +8,25 @@ public class compoundInterest {
 
         double amt;
         double rate;
-        double cmp;
+        int cmp;
         int years;
         double total;
 
-        System.out.print("Enter the principle amount: ");
+        System.out.print("Enter the principal amount: ");
         amt = scanner.nextDouble();
 
-        System.out.println("Enter the interest rate (in %): ");
-        rate = scanner.nextDouble();
+        System.out.print("Enter the interest rate (in %): ");
+        rate = scanner.nextDouble() / 100;
 
-        System.out.println("Enter the # of times compounded per year: ");
-        cmp = scanner.nextDouble();
+        System.out.print("Enter the # of times compounded per year: ");
+        cmp = scanner.nextInt();
 
         System.out.println("Enter the # of years: ");
         years = scanner.nextInt();
 
-        total = amt * (100 + rate) / 100;
+        total = amt * Math.pow(1 + rate / cmp, cmp * years);
 
-        System.out.println(total);
+        System.out.println("The amount after " + years + " is: R" +total);
         
         scanner.close();
     }
