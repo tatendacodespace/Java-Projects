@@ -1,6 +1,7 @@
 package Projects;
 import java.util.Scanner;
 
+// Compound intterest calculator
 public class compoundInterest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
