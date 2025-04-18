@@ -26,7 +26,7 @@ public class compoundInterest {
 
         total = amt * Math.pow(1 + rate / cmp, cmp * years);
 
-        System.out.println("The amount after " + years + " is: R" +total);
+        System.out.println("The amount after " + years + " is: R" + total);
         
         scanner.close();
     }
